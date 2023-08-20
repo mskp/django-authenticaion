@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Signup{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <form style="border: 1px solid white; border-radius: 1.5rem; padding: 2rem; width: 350px;" class="text-center" method="post" action="/signup">
+        {% csrf_token %}
+        <h2>Signup</h2>
+        <div class="mb-3">
+            <label for="full_name" class="form-label">Full Name</label>
+            <input placeholder="Enter your full name" type="text" class="form-control" id="full_name" name="full_name" required/>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input placeholder="someone@example.com" type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required/>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input placeholder="●●●●●●" type="password" class="form-control" id="password" name="password" required/>
+        </div>
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label">Confirm Password</label>
+            <input placeholder="●●●●●●" type="password" class="form-control" id="confirm_password" name="confirm_password" required/>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Signup</button>
+        <p class="mt-4">
+            Already have an account?
+            <a href="/login" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Login here</a>
+        </p>
+    </form>
+</div>
+{% endblock %}

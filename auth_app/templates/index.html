@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{%block title%}Home{%endblock%}
+{%block content%}
+<h1>Home page</h1>
+<h2>Welcome, {{user|title}}</h2>
+<a class="btn btn-danger" href="/logout">Logout</a>
+{%endblock%}

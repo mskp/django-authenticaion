@@ -1,0 +1,11 @@
+# Local development settings
+*.sqlite3
+*.db
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+__pycache__/

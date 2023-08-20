@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <form style="border: 1px solid white; border-radius: 1.5rem; padding: 2rem; width: 350px;" class="text-center" method="post" action="/login">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input placeholder="someone@example.com" type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required/>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input placeholder="●●●●●●" type="password" class="form-control" name="password" id="password" required/>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+        <p class="mt-4">
+            Don't have an account?
+            <a href="/signup" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Signup here</a>
+        </p>
+    </form>
+</div>
+{% endblock %}
